@@ -17,6 +17,10 @@
 		5ECD8D0E2CEBC12B00BDB8A5 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD8D0D2CEBC12B00BDB8A5 /* QuestionRepository.swift */; };
 		5ECD8D112CEBC1D800BDB8A5 /* QuestionRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD8D102CEBC1D800BDB8A5 /* QuestionRepositoryImpl.swift */; };
 		5ECD8D142CEBC24F00BDB8A5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD8D132CEBC24F00BDB8A5 /* APIClient.swift */; };
+		5ECD8D172CF252B300BDB8A5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD8D162CF252B300BDB8A5 /* ChatView.swift */; };
+		5ECD8D1C2CF2534F00BDB8A5 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5ECD8D1B2CF2534F00BDB8A5 /* OpenAISwift */; };
+		5ECD8D1F2CF2541600BDB8A5 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 5ECD8D1E2CF2541600BDB8A5 /* OpenAI */; };
+		5ECD8D242CF38D7100BDB8A5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5ECD8D232CF38D7100BDB8A5 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,9 @@
 		5ECD8D0D2CEBC12B00BDB8A5 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
 		5ECD8D102CEBC1D800BDB8A5 /* QuestionRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepositoryImpl.swift; sourceTree = "<group>"; };
 		5ECD8D132CEBC24F00BDB8A5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5ECD8D162CF252B300BDB8A5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		5ECD8D222CF2560F00BDB8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5ECD8D232CF38D7100BDB8A5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECD8D1F2CF2541600BDB8A5 /* OpenAI in Frameworks */,
+				5ECD8D1C2CF2534F00BDB8A5 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +56,7 @@
 		5ECD8CE32CEBB77600BDB8A5 = {
 			isa = PBXGroup;
 			children = (
+				5ECD8D232CF38D7100BDB8A5 /* .gitignore */,
 				5ECD8CEE2CEBB77600BDB8A5 /* Cosmo */,
 				5ECD8CED2CEBB77600BDB8A5 /* Products */,
 			);
@@ -63,6 +73,7 @@
 		5ECD8CEE2CEBB77600BDB8A5 /* Cosmo */ = {
 			isa = PBXGroup;
 			children = (
+				5ECD8D222CF2560F00BDB8A5 /* Info.plist */,
 				5ECD8D022CEBB93100BDB8A5 /* Data */,
 				5ECD8D012CEBB90900BDB8A5 /* Domain */,
 				5ECD8CFD2CEBB80F00BDB8A5 /* Presentation */,
@@ -84,6 +95,7 @@
 		5ECD8CFD2CEBB80F00BDB8A5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5ECD8D152CF252A100BDB8A5 /* Chat */,
 				5ECD8D002CEBB8F600BDB8A5 /* Home */,
 				5ECD8CFF2CEBB8B800BDB8A5 /* Root */,
 				5ECD8CFE2CEBB88A00BDB8A5 /* Onboarding */,
@@ -181,6 +193,14 @@
 			path = APIClient;
 			sourceTree = "<group>";
 		};
+		5ECD8D152CF252A100BDB8A5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5ECD8D162CF252B300BDB8A5 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +217,10 @@
 			dependencies = (
 			);
 			name = Cosmo;
+			packageProductDependencies = (
+				5ECD8D1B2CF2534F00BDB8A5 /* OpenAISwift */,
+				5ECD8D1E2CF2541600BDB8A5 /* OpenAI */,
+			);
 			productName = Cosmo;
 			productReference = 5ECD8CEC2CEBB77600BDB8A5 /* Cosmo.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +249,10 @@
 				Base,
 			);
 			mainGroup = 5ECD8CE32CEBB77600BDB8A5;
+			packageReferences = (
+				5ECD8D1A2CF2534F00BDB8A5 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				5ECD8D1D2CF2541600BDB8A5 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 5ECD8CED2CEBB77600BDB8A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ECD8CF72CEBB77800BDB8A5 /* Preview Assets.xcassets in Resources */,
+				5ECD8D242CF38D7100BDB8A5 /* .gitignore in Resources */,
 				5ECD8CF42CEBB77800BDB8A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +284,7 @@
 				5ECD8D0E2CEBC12B00BDB8A5 /* QuestionRepository.swift in Sources */,
 				5ECD8CF22CEBB77600BDB8A5 /* ContentView.swift in Sources */,
 				5ECD8D142CEBC24F00BDB8A5 /* APIClient.swift in Sources */,
+				5ECD8D172CF252B300BDB8A5 /* ChatView.swift in Sources */,
 				5ECD8CF02CEBB77600BDB8A5 /* CosmoApp.swift in Sources */,
 				5ECD8D112CEBC1D800BDB8A5 /* QuestionRepositoryImpl.swift in Sources */,
 				5ECD8D082CEBC01200BDB8A5 /* QuestionResponseDTO.swift in Sources */,
@@ -394,6 +424,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Cosmo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cosmo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,6 +453,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Cosmo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cosmo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,6 +494,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5ECD8D1A2CF2534F00BDB8A5 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		5ECD8D1D2CF2541600BDB8A5 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5ECD8D1B2CF2534F00BDB8A5 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ECD8D1A2CF2534F00BDB8A5 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		5ECD8D1E2CF2541600BDB8A5 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ECD8D1D2CF2541600BDB8A5 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5ECD8CE42CEBB77600BDB8A5 /* Project object */;
 }
